@@ -1,0 +1,16 @@
+<?php
+//Coordonnée du serveur sql
+$Dbname="db_try";
+$Username="root";
+$Password="Ariel&007";
+$Port=3309;
+
+//Connexion au serveur sql
+try{
+$Connect= new PDO('mysql:host= dbname=$Dbname, port=$Port', $Username, $Password);
+$Connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXECPTION);
+  
+}catch(PDO EXECPTION $e) {
+  echo "Erreur lors de l'insertion des données". $e->getMessage();
+}
+?>
