@@ -38,7 +38,7 @@ $Connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXECPTION);
         $stmt->bindParam(":mdp", $mdp);
         $stmt->execute();
 
-        if($stmt->execute) {
+        if($stmt->execute()) {
           echo "Données enregistrés avec succès.";
           header('Location : Confirmation.html');
         }else{
