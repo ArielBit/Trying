@@ -8,10 +8,23 @@ session_start();
     <meta name="" content="">
   </head>
   <body>
-    <?php
-   if($data as $row) {
-  
-    }
-  ?>
+    
+    <?php foreach ($data as $row) ?>
+<p>
+  <?php echo htmlspecialchars($row["id"]) ?>
+  User: <?php echo htmlspecialchars($row["user"]) ?>
+</p>
+
+  <p>
+  <?php echo htmlspecialchars($row["id"]) ?>
+  Email: <?php echo htmlspecialchars($row["email"]) ?>
+</p>
+
+  <p>
+  <?php echo htmlspecialchars($row["id"]) ?>
+  Mot de passe: <?php echo htmlspecialchars($row["mdp"]) ?>
+</p>
+
+    
   </body>
 </html>
