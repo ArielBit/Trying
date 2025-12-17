@@ -1,13 +1,14 @@
 <?php
 //Coordonnée du serveur sql
 $Dbname="db_try";
+$Host='127.0.0.9';
 $Username="root";
 $Password="Ariel&007";
 $Port=3309;
 
 //Connexion au serveur sql
 try{
-$Connect= new PDO('mysql:host= dbname=$Dbname, port=$Port', $Username, $Password);
+$Connect= new PDO('mysql:host=$Host, dbname=$Dbname, port=$Port', $Username, $Password);
 $Connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXECPTION);
   
 }catch(PDO EXECPTION $e) {
