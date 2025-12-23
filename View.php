@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html lang="fr">
   <head>
-    <meta charset="uft-8">
+    <meta charset="utf-8">
     <meta name="" content="">
   </head>
   <body>
@@ -34,7 +34,8 @@ $data=$stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
     
-    <?php foreach ($data as $row): ?>
+    <?php if(!empty($data)){
+foreach ($data as $row): ?>
 <p>
   <?php echo htmlspecialchars($row["id"]); ?>
   User: <?php echo htmlspecialchars($row["user"]); ?>
@@ -45,7 +46,13 @@ $data=$stmt->fetchAll(PDO::FETCH_ASSOC);
   Email: <?php echo htmlspecialchars($row["email"]); ?>
 </p>
 
-  <?php endforeach; ?>
+    <?php endforeach; ?>
+    <?php
+} else{
+    echo "Aucun utilisateur.";
+}
+endif; ?>
+  
   
 
     
