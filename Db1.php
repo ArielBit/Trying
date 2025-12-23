@@ -9,9 +9,9 @@ $Port=3309;
 //Connexion au serveur sql
 try{
 $Connect= new PDO('mysql:host=$Host, dbname=$Dbname, port=$Port', $Username, $Password);
-$Connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXECPTION);
+$Connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
-}catch(PDO EXECPTION $e) {
+}catch(PDO EXCEPTION $e) {
   echo "Erreur lors de l'insertion des données". $e->getMessage();
 }
 ?>
