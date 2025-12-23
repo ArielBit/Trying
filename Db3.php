@@ -27,7 +27,6 @@ $connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
       if($result){
         if(password_verify($mdp, $result['mot_de_passe'])){
-          echo "Connexion reussie, Bienvenue $ue";
           header('Location: Confirmation.html');
         }else{
           echo "Mot de passe incorrect.";
