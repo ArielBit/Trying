@@ -8,6 +8,11 @@ session_start();
     <meta name="" content="">
   </head>
   <body>
+
+    <?php 
+
+
+?>
     
     <?php foreach ($data as $row): ?>
 <p>
