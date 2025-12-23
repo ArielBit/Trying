@@ -1,7 +1,7 @@
 <?php
 //Coordonnée du serveur sql
 $dbname="db_try";
-$host='127.0.0.10';
+$host='127.0.0.9';
 $username="root";
 $password="Ariel&007";
 $port=3309;
