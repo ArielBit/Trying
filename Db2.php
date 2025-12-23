@@ -11,7 +11,7 @@ try{
 $connect= new PDO('mysql:host=$host; dbname=$dbname; port=$port; charset=utf8mb4', $username, $password);
 $connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-//Verification par la méthode POST
+//Verification par la méthode POST9
   if($_SERVER["REQUEST_METHOD"] ==="POST") {
     $user= filter_input(INPUT_POST, 'user', FILTER_SANITIZE_SPECIAL_CHARS);
     $email= filter_input(INPUT_POST,'email', FILTER_SANITIZE_EMAIL);
@@ -20,8 +20,8 @@ $connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //Verification de l'existence des données
     if(empty($user) || empty($email) || empty($mdp) ) {
 
-      if(!filter_var($email, FILTER_VALIDATE_EMAIL){
-         die('Email invalide');
+      if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+         die("Email invalide");
       }
     
     $mdpHash = password_hash($mdp, PASSWORD_DEFAULT);
@@ -59,6 +59,6 @@ $connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
   
 }catch(PDOException $e) {
-  echo "Erreur lors de l'insertion des données". $e->getMessage();
+  echo "Erreur lors de l'insertion des données page db2". $e->getMessage();
 }
 ?>

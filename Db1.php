@@ -8,7 +8,7 @@ $port=3309;
 
 //Connexion au serveur sql
 try{
-$connect= new PDO('mysql:host=$host; dbname=$dbname; port=$port; charset=utf8mb4', $username, $password);
+$connect= new PDO("mysql:host=$host; dbname=$dbname; port=$port; charset=utf8mb4", $username, $password);
 $connect-> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   
 }catch(PDOException $e) {
